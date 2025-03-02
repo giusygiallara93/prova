@@ -1,9 +1,6 @@
 from datetime import timedelta
 from odoo import _, api, fields, models
 from odoo.odoo.exceptions import ValidationError, UserError
-from odoo.fields import Command
-
-from odoo.odoo.tools import date_utils
 
 
 class SaleOrder(models.Model):

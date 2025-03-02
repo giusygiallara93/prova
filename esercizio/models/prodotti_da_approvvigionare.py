@@ -6,7 +6,7 @@ class ProdottiApprovvigionare(models.Model):
 
     _description = "Prodotti da approvvigionare"
 
-    product_id = fields.Many2one('product.product', 'Product')
+    product_id = fields.Many2one('product.template', 'Product')
     fornitore_id = fields.Many2one('res.partner', 'Fornitore')
     costo = fields.Float()
     sale_id = fields.Many2one('sale.order')
