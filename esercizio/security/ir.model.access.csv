@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order_manager,sale.order.manager,sale.model_sale_order,group_backoffice,1,1,1,1
+
+access_servizio_clienti,access.servizio.clienti,sale.model_sale_order,,1,1,1,0
+access_piano_rinnovo,access.piano.rinnovo,esercizio.model_piano_rinnovo,,1,1,1,0
+access_piano_motivazioni_sale,access.motivazioni.sale,esercizio.model_motivazioni_sale,,1,1,1,0
+access_piano_motivazioni_sale_wizard,access.motivazioni.sale.wizard,esercizio.model_motivazioni_sale_wizard,,1,1,1,0
+access_prodotti_approvvigionare,access.prodotti.approvvigionare,esercizio.model_prodotti_approvvigionare,,1,1,1,1
+access_piano_rate,access.piano.rate,esercizio.model_piano_rate,,1,1,1,0
