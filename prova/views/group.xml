@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record model="res.groups" id="group_backoffice">
+            <field name="name">Backoffice</field>
+        </record>
+
+        <record id="rule_backoffice" model="ir.rule">
+            <field name="name">Backoffice rule</field>
+            <field ref="sale.model_sale_order" name="model_id"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_backoffice'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="sales_team.group_sale_salesman_all_leads" model="res.groups">
+            <field name="name">User: All Documents</field>
+            <field name="implied_ids" eval="[(4, ref('esercizio.group_backoffice'))]"/>
+        </record>
+
+        <record id="sales_team.group_sale_salesman" model="res.groups">
+            <field name="name">User: Own Documents Only</field>
+            <field name="implied_ids" eval="[(4, ref('esercizio.group_backoffice'))]"/>
+        </record>
+
+        <record id="sales_team.group_sale_manager" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="comment">the user will have an access to the sales configuration as well as statistic
+                reports.</field>
+            <field name="implied_ids" eval="[(4, ref('esercizio.group_backoffice'))]"/>
+        </record>
+
+    </data>
+</odoo>
